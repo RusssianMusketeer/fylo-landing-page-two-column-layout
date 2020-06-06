@@ -1,0 +1,307 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: hsl(243, 87%, 12%);
+  font-size: 1.1em;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1, h2, h4 {
+  font-family: 'Raleway', sans-serif;
+}
+
+a {
+  color: #3DA08F;
+}
+
+.container {
+  padding: 30px;
+  max-width: 100%;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+}
+
+.flex > div,
+.flex > ul
+ {
+  flex: 1;
+}
+
+.flex > div:first-child {
+  margin-right: 20px;
+}
+
+.flex > div:last-child {
+  margin-left: 20px;
+}
+/* Navbar */
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 30px;
+}
+
+nav ul {
+  display: flex;
+  padding: 0;
+  list-style-type: none;
+}
+
+nav ul li {
+  margin-left: 50px;
+}
+
+nav ul a {
+  color: hsl(243, 87%, 12%);
+  text-decoration: none;
+  font-family: 'Raleway', sans-serif;
+}
+
+/* Form */
+
+form {
+display: flex;
+}
+
+input {
+  border: 1px solid hsl(243, 87%, 12%);
+  border-radius: 2px;
+  padding: 15px;
+  flex: 0.7;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+button {
+  border: 1px solid hsl(224, 93%, 58%);
+  border-radius: 2px;
+  padding: 15px;
+  background-color: hsl(224, 93%, 58%);
+  color: white;
+  flex: 0.3;
+  margin-left: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.light-blueish {
+  background-color: hsl(240, 75%, 98%);
+  position: relative;
+  margin-top: 100px;
+  padding: 50px 0;
+}
+
+.light-blueish::before {
+  content: '';
+  background-image: url(images/bg-curve-desktop.svg);
+  height: 70px;
+  width: 100%;
+  position: absolute;
+  top: -70px;
+  left: 0;
+  background-size: cover;
+}
+
+/* Testimonial */
+
+.testimonial-box {
+  background-color: white;
+  padding: 25px;
+  width: 360px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin-top: 40px;
+}
+
+.testimonial-box p {
+  letter-spacing:1px;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.user-info {
+  display: flex;
+}
+
+.user-info img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user-info h4 {
+  margin: 0;
+  font-weight: bold;
+}
+
+/* Blueish */
+
+.blueish {
+  background-color: hsl(238, 22%, 44%);
+  color: white;
+  padding: 50px 0;
+}
+
+.blueish form {
+  flex-direction: column;
+}
+
+.blueish form input {
+  flex: 1;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.blueish form button {
+  width: 50%;
+  margin: 20px 0;
+}
+
+/* Footer */
+
+footer {
+  background-color: hsl(243, 87%, 12%);
+  color:white;
+  padding: 100px 0 60px;
+}
+
+footer img {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(247deg) brightness(103%) contrast(103%);
+}
+
+.logos {
+  width: 30px;
+  height: 30px;
+  margin-left: 10px
+}
+
+footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer ul li {
+  margin-bottom: 15px;
+
+}
+
+footer .social-media {
+  display: flex;
+  align-items: center;
+  justify-content:flex-start;
+}
+
+.footer-flex {
+  align-items:flex-start;
+  margin-top: 1.5rem;
+  justify-content:center;
+
+}
+
+.first-col {
+  padding-right:6rem;
+}
+
+
+@media screen and (max-width: 768px) {
+
+  body {
+    text-align: center;
+  }
+
+  .flex {
+    flex-direction: column-reverse;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  .light-blueish::before {
+    background-image: url(images/bg-curve-desktop.svg);
+    height: 50px;
+    height: 70px;
+    width: 100%;
+    position: absolute;
+    top: -70px;
+    left: 0;
+    background-size: cover;
+  }
+
+footer ul {
+  padding: 0;
+  width: 100%;
+}
+
+.testimonial-box {
+  text-align: left;
+  margin: auto;
+  margin-top: 3rem;
+
+}
+
+.illustration {
+  margin-top: 30px;
+}
+
+.flex > div {
+  width: 100%;
+}
+
+.blueish .flex {
+  flex-direction: column;
+}
+
+.blueish form input {
+  margin: auto;
+  width: 69%;
+  margin-bottom: 10px;
+
+}
+.blueish form button {
+  margin: auto;
+  width: 69%;
+}
+
+footer{
+  text-align: center;
+
+}
+
+footer .social-media {
+  display:inline-block;
+  padding: none;
+}
+
+.footer-flex {
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.flex > div:last-child {
+    margin:0;
+}
+}
